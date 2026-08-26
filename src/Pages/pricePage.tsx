@@ -5,23 +5,21 @@ import { Check } from 'lucide-react';
 
 // import { pricing } from '../constant'
 
-
 type Props = {
   color:string
  }
 
-export default function PricePage({color
- }:Props) {
+export default function PricePage({color}:Props) {
   return (
     <section
-     className="  h-screen bg-no-repeat bg-fixed bg-cover bg-blend-multiply bg-green-500 opacity-80 mb-6" 
+     className="h-screen bg-no-repeat bg-fixed bg-cover bg-blend-multiply bg-green-500 opacity-80 mb-6" 
      style={{backgroundImage:`url(${photopricing})`}}>
-              <TitleSection title="Pricing Plan" color="text-white py-10" />
       <main className='mr-6 ml-10 '>
+         <TitleSection title="Pricing Plan" color="text-white py-10" />
       <div className={`${color} flex gap-6 mt-6`}>
        {pricing.map((item,index)=>(
         item.titre === "Standart Package"
-        ?<div key={index} className='flex-col bg-blue-600 space-y-3 p-6'>
+        ?<div key={index} className='flex-col bg-blue-600 scale-120 space-y-3 p-6'>
           <p className='text-4xl text-green-500 font-bold text-center'>{item.titre} </p>
           <p className='text-center text-6xl font-bold text-white'>{item.price}</p>
         <div className='text-white space-y-3'>
@@ -49,6 +47,8 @@ export default function PricePage({color
       
       </div>
       </main>
+
+      
     </section>
   )
 }

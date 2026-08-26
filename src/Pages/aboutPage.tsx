@@ -5,11 +5,11 @@ export default function Creative() {
   return (
     <section className=" grid grid-cols-2  gap-4 ml-20 py-20 ">
       <div className=" relative w-full sm:w-1/2 md:w-1/2  ">
-        <div className="size-150 z-10">
+        <div className="size-120 z-0">
          <img src={creat} alt="create"  />  
         </div>
         <div className="bg-green-400 text-white w-1/3 absolute 
-         rounded-xl p-6 text-center top-115 -left-10">
+         rounded-xl px-0 text-center top-90 -left-10">
           <p className="text-4xl font-extrabold">12</p>
           <p className="text-xl">Year <br />Expérience</p>
         </div>

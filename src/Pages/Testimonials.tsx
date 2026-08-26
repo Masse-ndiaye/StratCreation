@@ -1,45 +1,53 @@
-import  { useState } from 'react'
-import TitleSection from '../Components/TitleSection'
-import { testimonial } from '../constant'
+// import TitleSection from '../Components/TitleSection';
+// import { testimonial } from '../constant';
 
-export default function Testimonials() {
-    const [test,setTest] = useState(testimonial)
-    const  teste = ()=>{
-        const filtered = [...test]
-        const lem1 = filtered.filter(nom => nom.nom !== "Richard Nautz")
-        setTest(lem1)
-    }
-    const  teste2 = ()=>{
-        const filtered =  [...test]
-        const lem2 = filtered.filter(nom => nom.nom !== "Olivia Grosh")
-        setTest(lem2)
-    }
+   type Props = {
+    page:number;
+    totalPage : number ;
+    OnPrev:() => void;
+    OnNext : () => void;
+  }
+
+
+
+export default function Testimonials({page,totalPage,OnPrev,OnNext}:Props) {
+  //Pagination logique
+
+
   return (
     <section>
-      <TitleSection title={'Testimonials'} color={'text-slate-900'}/>
-      <div>
-      <div className='flex gap-7 scrollbar-none overflow-x-auto'>
-    {test.map((item,index)=>(
-        <div key={index} className='w-1/2'>
-            <p>{item.description}</p>
-            
-            <div>
-                <img src={item.imp} alt="imp" />
-                <div>
-                    <p>{item.nom}</p>
-                    <p>{item.poste}</p>
-                </div>
-            </div>
-        </div>
-
-    ))}
-    </div>
-    <div className=' flex justify-center gap-3'>
-        <button className='size-3 bg-gray-600 rounded-full' onClick={teste}></button>
-        <button className='size-3 bg-gray-600 rounded-full' onClick={teste2}></button>
-    </div>
-      
+      <div className="flex justify-between items-center mt-6">
+        <button 
+        type="button"
+        onClick={OnPrev}
+        disabled={page <= 1}
+        >
+          Précédent
+        </button>
+        <p>page <span>{page}/{totalPage}</span></p>
+        <button type="button"
+        onClick={OnNext}
+        disabled={page >= totalPage}>
+          Suivant        
+        </button>
       </div>
+      {/* <TitleSection title="Our Testimonials" color="text-slate-900" />
+      <div>
+        {testimonial.map((item,index)=>(
+          <div key={index}>
+            <div>
+              {item.description}
+            </div>
+            <div>
+              <img src={item.img} alt="images" />
+              <p>{item.nom}</p>
+              <p>{item.poste}</p>
+            </div>
+          </div>
+          
+        ))}
+      </div> */}
+ 
     </section>
   )
 }

@@ -27,41 +27,46 @@ import aut from '../Components/assets/author1.jpg'
 
 
 
-
 export const features = [
     {
+        id:1,
         imgA :service1,
         titre:"Optimisation",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
-     {
+     {  
+        id:2,
         imgA :service2,
-        titre:"Optimisation",
+        titre:"Market Analysis",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
-     {
+     {  
+        id:3,
         imgA :service3,
-        titre:"Optimisation",
+        titre:"Concept & Idea",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
-     {
+     {  
+        id:4,
         imgA :service4,
-        titre:"Optimisation",
+        titre:"Development",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
-     {
+     {  
+        id:5,
         imgA :service5,
-        titre:"Optimisation",
+        titre:"Integration",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
-     {
+     {  
+        id:6,
         imgA :service6,
-        titre:"Optimisation",
+        titre:"Support",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
@@ -78,7 +83,7 @@ export const navList:menuListe[]= [
         nom:'About Us'
     },
      {
-        lien:"/services",
+        lien:"/service",
         nom:'Services'
     },
      {
@@ -139,53 +144,6 @@ export const skill = [
     },
 ]
 
-export  const tit = [
-    {
-        titre : "all",
-       
-    },
-    {
-         titre:"Markiting",
-    },
-    {
-         titre:"Developpement",
-    },
-    {
-         titre:"Optimization",
-    },
-    {
-         titre:"Integration",
-    }
-]
-export const galerie = [
-    {
-        photo:portA,
-    },
-     {
-        photo:portB,
-    },
-     {
-        photo:portC,
-    },
-     {
-        photo:portD,
-    },
-     {
-        photo:portE,
-    },
-    {
-        photo:portF,
-    },
-    {
-        photo:portg,
-    },
-    {
-        photo:porth,
-    },
-    {
-        photo:portI,
-    },
-]
 
 export const parcour = [
     {
@@ -206,7 +164,13 @@ export const parcour = [
     },
 ] 
 
-export const team =     [
+ export type teamOptions = {
+    imgT:string;
+    nom:string;
+    profession:string;
+}
+
+export const equipe:teamOptions []=     [
     {
         imgT:teamA,
         nom :"Jeremy White",
@@ -272,22 +236,111 @@ export const pricing = [
     },
 ]
 
-export const testimonial = [
+
+export const competente = 
+[
+    { label: "Market Analysis",
+       description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?",  
+     percent: 100, color: "#77DD77"
+    },
+    { label: "Optimisation", 
+               description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?",   
+          percent: 90, color: "#77DD77"
+     },
+    { label: "Integration",
+               description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?",   
+             percent:   80, color: "#77DD77"
+     },
+     { label: "Development",
+               description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?",      
+             percent: 50, color: "#77DD77" 
+    },
+
+]
+
+export const portfolioOptions = [
+    "All",
+    "Development",
+    "Optimization",
+    "Integration",
+];
+
+export type portfolio = {
+    img:string;
+    nom :string,
+    categorie?:string;
+}
+ export const portfolioItems:portfolio[] = [
     {
-        description :'loremgggggggggggggggggggggggggggggggggggggggggggggggggggggggé',
-        imp:aut,
+        img:portA,
+        nom :"porto1",
+        categorie:portfolioOptions[1],
+    },
+    {
+        img:portB,
+        nom :"porto2",
+        categorie:portfolioOptions[2],
+    },
+    {
+        img:portC,
+        nom :"porto3",
+        categorie:portfolioOptions[3],
+    },
+    {
+        img:portD,
+        nom :"porto4",
+        categorie:portfolioOptions[4],
+    },
+    {
+        img:portE,
+        nom :"porto5",
+        categorie:portfolioOptions[5],
+    },
+    {
+        img:portF,
+        nom :"porto6",
+        categorie:portfolioOptions[6],
+    },
+    {
+        img:portg,
+        nom :"porto7",
+        categorie:portfolioOptions[7],
+    },
+    {
+        img:porth,
+        nom :"porto8",
+        categorie:portfolioOptions[8],
+    },
+    {
+        img:portI,
+        nom :"porto9",
+        categorie:portfolioOptions[9],
+    },
+ ]
+ export type testimoniale= {
+ description: string;
+ img: string;
+ nom: string;
+ poste: string;
+}
+
+
+export const testimonial:testimoniale[] = [
+    {
+        description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias, doloribus corpporis harum  nam.Molesttias doloremque quaerat odio consectetur quasi, culpa sit distincio',
+        img:aut,
         nom:'Carlie Addisson',
         poste:"manager"
     },
      {
-        description :'loremgggggggggggggggggggggggggggggggggggggggggggggggggggggggé',
-        imp:aut,
+        description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias, doloribus corpporis harum  nam.Molesttias doloremque quaerat odio consectetur quasi, culpa sit distincio',
+        img:aut,
         nom:'Olivia Grosh',
         poste:"manager"
     },
      {
-        description :'loremgggggggggggggggggggggggggggggggggggggggggggggggggggggggé',
-        imp:aut,
+       description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias, doloribus corpporis harum  nam.Molesttias doloremque quaerat odio consectetur quasi, culpa sit distincio',
+        img:aut,
         nom:'Richard Nautz',
         poste:"manager"
     },

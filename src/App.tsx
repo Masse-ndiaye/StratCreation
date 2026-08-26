@@ -1,52 +1,46 @@
 import Navbar from "./Components/Navbar";
-// import Skills from "./Components/Skills";
- import TitleSection from './Components/TitleSection'
+import TitleSection from "./Components/TitleSection";
 import AboutPage from "./Pages/aboutPage";
- import HomePage from "./Pages/homePage";
-//  import ContactPage from "./Pages/contactPage";
+import HomePage from "./Pages/homePage";
+import ContactPage from "./Pages/contactPage";
 import PricePage from "./Pages/pricePage";
- import PortfolioPage from "./Pages/Portfolio";
+import Skills from "./Components/Skills";
+import PortfolioPage from "./Pages/Portfolio";
 import TeamPage from "./Pages/teamPage";
 import ServicePage from "./Pages/servicePage";
-// import Testimonials from "./Pages/Testimonials";
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+ import Testimonials from "./Pages/Testimonials";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import ServiceDetail from "./Components/serviceDetail";
 
-  
 function App() {
   return (
-    
- <BrowserRouter>
-  <Navbar/>
-  {/* Routes */}
-          <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path='/services' element={<ServicePage/>} /> 
-           <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/team" element={<TeamPage />} />
-          <Route path="/pricing" element={<PricePage color={""} />} />
-         </Routes>   
-   <section className="">
-      <HomePage />
-       <AboutPage />  
-           <TitleSection title="Our Services" color="text-slate-900" />
-       <ServicePage /> 
-         <TitleSection title="Our Skills" color="text-slate-900" />
-          <PortfolioPage />
-             <TitleSection title="Our Team" color="text-slate-900 bg-gray-100  p-5 w-full" /> 
-          <TeamPage /> 
-             
-               <PricePage color={""} /> 
-               {/* <Testimonials />  */}
-           {/* <ContactPage /> */}
-            {/* <Skills />  */}
-          
-                  
-            
-   </section>
-     
-</BrowserRouter>
-   
+    <BrowserRouter>
+      <Navbar />
+      {/* Routes */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/service" element={<ServicePage />} />
+        {/* <Route path="/service/:id" element={<ServiceDetail />} /> */}
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/pricing" element={<PricePage color={""} />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <section className="">
+        {/* <HomePage />   */}
+        <AboutPage />
+        <ServicePage />
+        {/* <ServiceDetail /> */}
+        <TitleSection title="Our Skills" color="text-slate-900 mt-20" />
+        <Skills />
+        <PortfolioPage />
+        
+        <TeamPage />
+
+         <PricePage color={""} />        <ContactPage /> 
+      </section>
+    </BrowserRouter>
   );
 }
 

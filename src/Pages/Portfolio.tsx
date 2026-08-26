@@ -1,36 +1,48 @@
-import TitleSection from "../Components/TitleSection"
-import {tit,galerie,parcour} from "../constant"
+import React, { useState } from 'react'
+import { portfolioItems, portfolioOptions, type portfolio } from '../constant'
+import { Flame } from 'lucide-react';
+import TitleSection from '../Components/TitleSection';
 
-export default function PortfolioPage() {
+export default function Portfolio() {
+
+  const [card,setCart] = useState<portfolio[]>(portfolioItems)
+   const handleClick  = (event:React.MouseEvent<HTMLButtonElement>)=>{
+    const valeur = event.currentTarget.value;
+    if(valeur === 'All'){
+      setCart(portfolioItems)
+    }else{
+      const filter = portfolioItems.filter((item)=>item.categorie === valeur);
+      setCart(filter)
+    }
+   }
+
+
+
   return (
-   <section className="">
-               <TitleSection title="Our Portfolio" color="text-slate-900 bg-gray-100  mt-10" />
-    <div className="bg-gray-100 w-full p-10">
-   <div className="flex flex-wrap  justify-center items-center gap-5 ">
-     {tit.map((item,index)=>(
-       <ul key={index}className="" >
-        <li className=" font-semibold text-xl mb-6 mt-6">{item.titre}</li>
-       </ul>
-    ))}
-   </div>
-   <div className="grid grid-cols-3 gap-4 p-6 sm:grid-cols-1
-    md:grid-cols-2 lg:grid-cols-3 mt-2">
-    {galerie.map((item,index)=>(
-        <div key={index}>
-            <img src={item.photo} alt="photo" 
-        />
-        </div>
-    ))}
-   </div>
-    </div>
-    <div className="flex justify-center items-center space-x-10 bg-gray-50 p-26">
-    {parcour.map((item,index)=>(
-       <div key={index} className="bg-white shadow-2xl mt-20 p-10 rounded-lg">
-            <p className="text-5xl font-bold text-green-500">{item.chiffres}<span>+</span></p>
-            <h4 className="text-4xl font-bold mt-4">{item.element}</h4>
-       </div>
-    ))}
-    </div>
-   </section>
+    <section className='bg-gray-100 p-10'>
+         <TitleSection title="Our Portfolio" color="text-slate-900 mb-5" />
+      <div className='flex justify-center items-center gap-6 text-2xl font-bold'>
+        {portfolioOptions.map((item,index)=>(
+          <div key={index} >
+            <button value={item} onClick={handleClick}>
+              {item}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className='grid grid-cols-2 gap-2 lg:grid-cols-4 p-10'>
+        {card.map((item,index)=>(
+          <div key={index} className='relative'>
+            <img src={item.img} alt="images" />
+            <div className='absolute top-0 w-full bg-blue-600/70 h-full flex flex-col
+            gap-2 justify-center items-center text-white opacity-0 hover:opacity-600 duration-150
+             ease-in transition-opacity cursor-pointer'>
+                 <Flame />
+              <p>{item.nom}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }
