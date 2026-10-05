@@ -1,6 +1,7 @@
 // ServiceDetail.tsx
 import { useParams, Link } from "react-router-dom";
 import { features } from "../constant";
+import { Undo2 } from "lucide-react";
 
 function ServiceDetail() {
   const { id } = useParams();
@@ -11,11 +12,12 @@ function ServiceDetail() {
   }
 
   return (
-    <div className="h-screen flex flex-col bg-amber-600 justify-center items-center">
+    <div className="h-screen flex flex-col bg-green-500 justify-center items-center">
+      <p>ID : {service.id}</p>
       <h1>{service.titre}</h1>
       <p>{service.prgrphe}</p>
-      <p>ID : {service.id}</p>
-      <Link to="/service">Retour à la liste de la page service</Link>
+      <Link to="/service" className="flex gap-3"><Undo2 size={20} className="bg-gray-500 text-2xl" />
+      Retour la page précèdent</Link>
     </div>
   );
 }
