@@ -9,7 +9,7 @@ import TitleSection from '../Components/TitleSection';
 export default function teamPage() {
   return (
     <section className='bg-gray-100 p-16 space-y-17'>
-         <TitleSection title="Our Team" color="text-slate-900 " />
+         <TitleSection title="Our Team" color="text-slate-900 mt-10" />
       <div className='flex  mb-10 gap-2 px-6'>
       {equipe.map((item,index)=>(
         <div key={index} className='relative'>

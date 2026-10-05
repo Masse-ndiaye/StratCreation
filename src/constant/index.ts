@@ -1,5 +1,4 @@
 import service1 from '../Components/assets/services-1.png'
-import founder from '../Components/assets/founder.jpg'
 import service2 from '../Components/assets/services-2.png'
 import service3 from '../Components/assets/services-3.png'
 import service4 from '../Components/assets/services-4.png'
@@ -20,51 +19,51 @@ import teamB from'../Components/assets/team-3.jpg'
 import teamC from'../Components/assets/team-4.jpg'
 import teamD from'../Components/assets/team-5.jpg'
 import aut from '../Components/assets/author1.jpg'
+import founder from '../Components/assets/founder.jpg'
 
 
-
-
+ 
 
 
 
 export const features = [
     {
-        id:1,
+        id:"1",
         imgA :service1,
         titre:"Optimisation",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
      {  
-        id:2,
+        id:"2",
         imgA :service2,
         titre:"Market Analysis",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
      {  
-        id:3,
+        id:"3",
         imgA :service3,
         titre:"Concept & Idea",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
      {  
-        id:4,
+        id:"4",
         imgA :service4,
         titre:"Development",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
      {  
-        id:5,
+        id:"5",
         imgA :service5,
         titre:"Integration",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
         prgrphe1:"adipisicing elit. Ipsam, suscipit?",
     },
      {  
-        id:6,
+        id:"6",
         imgA :service6,
         titre:"Support",
         prgrphe:"Lorem ipsum dolor sit amet consectetur ",
@@ -93,6 +92,10 @@ export const navList:menuListe[]= [
      {
         lien:"/team",
         nom:'Team'
+    },
+     {
+        lien:"/testimonial",
+        nom:'Testimonial'
     },
      {
         lien:"/pricing",
@@ -318,6 +321,7 @@ export type portfolio = {
     },
  ]
  export type testimoniale= {
+id : string
  description: string;
  img: string;
  nom: string;
@@ -327,22 +331,32 @@ export type portfolio = {
 
 export const testimonial:testimoniale[] = [
     {
-        description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias, doloribus corpporis harum  nam.Molesttias doloremque quaerat odio consectetur quasi, culpa sit distincio',
+        id:"1",
+        description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias.',
         img:aut,
         nom:'Carlie Addisson',
         poste:"manager"
     },
-     {
-        description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias, doloribus corpporis harum  nam.Molesttias doloremque quaerat odio consectetur quasi, culpa sit distincio',
-        img:aut,
+     {  
+        id:"2",
+        description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias.',
+        img:founder,
         nom:'Olivia Grosh',
         poste:"manager"
     },
      {
-       description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias, doloribus corpporis harum  nam.Molesttias doloremque quaerat odio consectetur quasi, culpa sit distincio',
+        id:"3",
+       description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias.',
         img:aut,
         nom:'Richard Nautz',
         poste:"manager"
+    },
+     {
+        id:"4",
+       description :'lorem ipsum dolor sit amet , consectetur adiscing elit.Labore squi voluptatem explicado vero non.AT ducimus allias.',
+        img:founder,
+        nom:'Masse Ndiaye',
+        poste:"developpers"
     },
 
 ]

@@ -42,9 +42,7 @@ export default function ContactPage() {
           f13.1!3m3!1m2!1s0xec10bb55f4b5493%3A0x57fe6956325e6eb!2sXarala!5e0!3m2!1sfr!2ssn!4v1783460784086!5m2!1sfr!2ssn" 
           className='w-full h-100' ></iframe>
          </div>
-         <div className='text-center text-xl text-white p-6'>
-            Copyright © All rights reserved.
-         </div>
+         
           </section>
           
    

@@ -3,9 +3,9 @@ import { creative } from "../constant";
 
 export default function Creative() {
   return (
-    <section className=" grid grid-cols-2  gap-4 ml-20 py-20 ">
+    <section className=" flex justify-center items-center h-screen space-x-30 mt-10 ">
       <div className=" relative w-full sm:w-1/2 md:w-1/2  ">
-        <div className="size-120 z-0">
+        <div className="size-110 ml-10 z-0">
          <img src={creat} alt="create"  />  
         </div>
         <div className="bg-green-400 text-white w-1/3 absolute 
